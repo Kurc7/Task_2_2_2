@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Модель</th>
+            <th>Тип Двигателя</th>
+            <th>Цена</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="car, iter: ${cars}">
+            <tr>
+                <td th:text="${car.model}"></td>
+                <td th:text="${car.engine}"></td>
+                <td th:text="${car.price}"></td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
